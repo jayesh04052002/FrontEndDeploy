@@ -1,0 +1,12 @@
+<div class="sidebar-brand">
+  <span class="brand-icon"><i class="bi bi-shield-check"></i></span>
+  <span class="brand-text"><strong>InsureSphere</strong><small>Insurance Management</small></span>
+</div>
+<div class="role-heading">{{ roleLabels[role()] }} Workspace</div>
+<nav aria-label="{{ roleLabels[role()] }} sidebar" class="sidebar-nav">
+  @for (item of items(); track item.path) {
+    <a [routerLink]="['/', role(), item.path]" routerLinkActive="active" class="nav-item">
+      <i [class]="'bi bi-' + item.icon"></i><span>{{ item.label }}</span>
+    </a>
+  }
+</nav>

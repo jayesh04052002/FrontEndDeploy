@@ -1,0 +1,8 @@
+:host{display:flex;flex-direction:column;height:100%;min-height:0;color:#d1dded}
+.sidebar-brand{min-height:86px;display:flex;align-items:center;gap:12px;padding:20px;border-bottom:1px solid #21344e}
+.brand-icon{display:grid;place-items:center;width:43px;height:43px;background:#43d7b8;color:#062f36;border-radius:13px;font-size:23px}
+.brand-text{display:flex;flex-direction:column;min-width:0;gap:4px}.brand-text strong{font-size:18px;letter-spacing:-.6px;color:#fff}.brand-text small{font-size:10px;letter-spacing:.6px;color:#88a1bf}
+.role-heading{padding:24px 24px 12px;font-size:10px;text-transform:uppercase;letter-spacing:1.4px;font-weight:800;color:#839ab8}
+.sidebar-nav{padding:0 11px 25px;overflow:auto;scrollbar-width:thin;scrollbar-color:#344760 transparent}
+.nav-item{display:flex;align-items:center;gap:13px;min-height:45px;padding:11px 13px;margin:2px 0;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;color:#b7c7dc;transition:background .15s,color .15s}
+.nav-item i{font-size:17px;width:21px;text-align:center;color:#8ca4c3}.nav-item:hover{background:#192e4b;color:#fff}.nav-item.active{background:#175b65;color:#fff;box-shadow:inset 3px 0 #4fe3c0}.nav-item.active i{color:#6eeacf}

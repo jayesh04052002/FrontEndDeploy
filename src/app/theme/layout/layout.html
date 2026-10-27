@@ -1,0 +1,26 @@
+<div class="shell" [class.mobile-open]="mobileOpen()">
+  <button class="overlay" aria-label="Close sidebar" type="button" (click)="mobileOpen.set(false)"></button>
+  <aside class="sidebar">
+    @switch (role) {
+      @case ('admin') { <app-admin-sidebar /> }
+      @case ('agent') { <app-agent-sidebar /> }
+      @case ('customer') { <app-customer-sidebar /> }
+    }
+  </aside>
+  <div class="main-area">
+    <header class="topbar">
+      <div class="page-crumb">
+        <button type="button" aria-label="Open sidebar" class="mobile-trigger" (click)="mobileOpen.set(true)"><i class="bi bi-list"></i></button>
+        <span>Workspace</span><i class="bi bi-chevron-right divider-icon"></i><strong>{{ currentLabel() }}</strong>
+      </div>
+      <div class="top-right">
+        <label for="preview-role">Role</label>
+        <select id="preview-role" [value]="role" (change)="onRoleChange($event)" aria-label="Select preview role">
+          @for (item of roles; track item) { <option [value]="item">{{ roleLabels[item] }}</option> }
+        </select>
+        <span class="avatar"><i class="bi bi-person"></i></span>
+      </div>
+    </header>
+    <main class="content"><router-outlet /></main>
+  </div>
+</div>
